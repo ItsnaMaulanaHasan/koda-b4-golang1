@@ -7,12 +7,15 @@ func area(r float32) float32{
 	return phi * r * r
 }
 
-func around(r float32) float32{
+func circumference(r float32) float32{
 	const phi = 3.14
 	return 2*phi*r
 }
 
 func main(){
-	fmt.Println("Hasil luas lingkaran dengan r: 10 = ", area(10))
-	fmt.Println("Hasil keliling lingkaran dengan r: 10 = ", around(10))
+	var r float32
+	fmt.Print("Enter the radius of the circle: ")
+	fmt.Scan(&r)
+	fmt.Println("The result of the area of a circle with a radius of", r, "=", area(r))
+	fmt.Println("The result of the circumference of a circle with a radius of", r, "=", circumference(r))
 }
