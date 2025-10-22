@@ -1,4 +1,4 @@
-package Circle
+package circle
 
 func (fn Circle) Circumference() float32{
 	const phi = 3.14
