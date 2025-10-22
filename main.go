@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	circle "go-practice/circle"
+	"go-practice/circle"
 )
 
 func main(){
