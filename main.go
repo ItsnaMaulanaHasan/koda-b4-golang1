@@ -1,21 +1,18 @@
 package main
 
-import "fmt"
-
-func area(r float32) float32{
-	const phi = 3.14
-	return phi * r * r
-}
-
-func circumference(r float32) float32{
-	const phi = 3.14
-	return 2*phi*r
-}
+import (
+	"fmt"
+	circle "go-practice/circle"
+)
 
 func main(){
 	var r float32
 	fmt.Print("Enter the radius of the circle: ")
 	fmt.Scan(&r)
-	fmt.Println("The result of the area of a circle with a radius of", r, "=", area(r))
-	fmt.Println("The result of the circumference of a circle with a radius of", r, "=", circumference(r))
+
+	circle := circle.Circle{
+		Radius: r,
+	}
+	fmt.Println("The result of the area of a circle with a radius of", r, "=", circle.Area())
+	fmt.Println("The result of the circumference of a circle with a radius of", r, "=", circle.Circumference())
 }
